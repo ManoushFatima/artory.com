@@ -251,14 +251,14 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
-    height: 100vh; /* Full viewport height */
+    height: auto; /* Full viewport height */
     padding: 0 20px;
     box-sizing: border-box;
 }
 
 .about-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; /* Ensure content inside is centered vertically */
     align-items: center; /* Ensure content inside is centered horizontally */
     text-align: center; /* Center text */
