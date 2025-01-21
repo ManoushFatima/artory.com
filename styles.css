@@ -251,7 +251,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
-    height: auto; /* Full viewport height */
+    height: 100vh; /* Full viewport height */
     padding: 0 20px;
     box-sizing: border-box;
 }
