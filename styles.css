@@ -247,60 +247,91 @@ header nav ul li a:hover {
 }
 
 
-
-
-/* About Section */
 .about {
-    padding: 50px 20px;
-    background: #ffffff;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .about-content {
     display: flex;
-    justify-content: center;  
-    align-items: center;             
-    flex-wrap: wrap;                 
+    flex-direction: column;
+    justify-content: center; /* Ensure content inside is centered vertically */
+    align-items: center; /* Ensure content inside is centered horizontally */
+    text-align: center; /* Center text */
+    max-width: 800px;
+    width: 100%;
 }
 
-.about-image img {
-    width: 100%;                     
-    max-width: 500px;               
-    border-radius: 10px;             
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
-    align-items: center;
-}
-
-.about-info {
-    max-width: 400px;                
-    margin-left: 30px;               
-}
-
-.about h1 {
-    font-size: 36px;
+.about-info h1 {
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    
 }
 
-.about p {
-    font-size: 18px;
+/* Add the following styles to your existing stylesheet */
+
+#about h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    overflow: hidden; /* Ensures that the text is hidden until it types out */
+    border-right: .15em solid black; /* Creates the cursor effect */
+    width: 0; /* Start with width 0 */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Define the typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Define the caret blinking animation */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.about-info p {
+    font-size: 1.1rem;
     line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;       
-        text-align: center;           
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-info h1 {
+        font-size: 2rem;
     }
 
-    .about-image img {
-        max-width: 80%;              
-        margin-bottom: 20px;         
-    }
-
-    .about-info {
-        margin-left: 0;
+    .about-info p {
+        font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .about-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-info p {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 /* Gallery Section */
