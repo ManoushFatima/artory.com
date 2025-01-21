@@ -251,7 +251,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Full viewport height */
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -262,8 +262,10 @@ header nav ul li a:hover {
     justify-content: center; /* Ensure content inside is centered vertically */
     align-items: center; /* Ensure content inside is centered horizontally */
     text-align: center; /* Center text */
-    max-width: 800px;
+    max-width: 1200px;
     width: 100%;
+    flex-wrap: wrap;
+    
 }
 
 .about-info h1 {
